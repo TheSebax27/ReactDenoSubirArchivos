@@ -1,0 +1,256 @@
+@baseUrl = http://localhost:8000
+
+### ===========================
+### CATEGORÍAS - CRUD
+### ===========================
+
+GET {{baseUrl}}/categoria
+
+POST {{baseUrl}}/categoria
+Content-Type: application/json
+
+{
+    "nombreCategoria": "Electrónicos"
+}
+
+POST {{baseUrl}}/categoria
+Content-Type: application/json
+
+{
+    "nombreCategoria": "Ropa y Accesorios"
+}
+
+
+POST {{baseUrl}}/categoria
+Content-Type: application/json
+
+{
+    "nombreCategoria": "Hogar y Jardín"
+}
+
+
+PUT {{baseUrl}}/categoria
+Content-Type: application/json
+
+{
+    "idCategoria": 1,
+    "nombreCategoria": "Tecnología y Electrónicos"
+}
+
+
+DELETE {{baseUrl}}/categoria
+Content-Type: application/json
+
+{
+    "idCategoria": 3
+}
+
+### ===========================
+### USUARIOS - CRUD
+### ===========================
+
+
+GET {{baseUrl}}/usuarios
+
+
+POST {{baseUrl}}/usuarios
+Content-Type: application/json
+
+{
+    "nombre": "Juan",
+    "apellido": "Pérez",
+    "email": "juan.perez@email.com",
+    "urlImagen": "https://example.com/images/juan.jpg",
+    "documento": "12345678",
+    "contrasena": "123456"
+}
+
+
+POST {{baseUrl}}/usuarios
+Content-Type: application/json
+
+{
+    "nombre": "María",
+    "apellido": "González",
+    "email": "maria.gonzalez@email.com",
+    "urlImagen": "",
+    "documento": "87654321",
+    "contrasena": "password123"
+}
+
+
+POST {{baseUrl}}/usuarios
+Content-Type: application/json
+
+{
+    "nombre": "Carlos",
+    "apellido": "Rodríguez",
+    "email": "carlos.rodriguez@email.com",
+    "urlImagen": "https://example.com/images/carlos.jpg",
+    "documento": "11223344",
+    "contrasena": "carlos2024"
+}
+
+
+PUT {{baseUrl}}/usuarios
+Content-Type: application/json
+
+{
+    "idUsuario": 1,
+    "nombre": "Juan Carlos",
+    "apellido": "Pérez Gómez",
+    "email": "juancarlos.perez@email.com",
+    "urlImagen": "https://example.com/images/juan-updated.jpg",
+    "documento": "12345678",
+    "contrasena": "newpassword123"
+}
+
+
+DELETE {{baseUrl}}/usuarios
+Content-Type: application/json
+
+{
+    "idUsuario": 3
+}
+
+### ===========================
+### PRODUCTOS - CRUD
+### ===========================
+
+
+GET {{baseUrl}}/productos
+
+
+POST {{baseUrl}}/productos
+Content-Type: application/json
+
+{
+    "cantidad": 10,
+    "descripcion": "Smartphone Samsung Galaxy A54",
+    "precio": 599.99,
+    "unidad": "unidad",
+    "urlImagen": "https://example.com/images/samsung-a54.jpg",
+    "idCategoria": 1
+}
+
+
+POST {{baseUrl}}/productos
+Content-Type: application/json
+
+{
+    "cantidad": 5,
+    "descripcion": "Laptop HP Pavilion 15",
+    "precio": 899.99,
+    "unidad": "unidad",
+    "urlImagen": "https://example.com/images/hp-pavilion.jpg",
+    "idCategoria": 1
+}
+
+
+POST {{baseUrl}}/productos
+Content-Type: application/json
+
+{
+    "cantidad": 25,
+    "descripcion": "Auriculares Bluetooth Sony WH-1000XM4",
+    "precio": 299.99,
+    "unidad": "unidad",
+    "urlImagen": "",
+    "idCategoria": 1
+}
+
+
+POST {{baseUrl}}/productos
+Content-Type: application/json
+
+{
+    "cantidad": 15,
+    "descripcion": "Camisa de algodón manga larga",
+    "precio": 45.99,
+    "unidad": "unidad",
+    "urlImagen": "https://example.com/images/camisa-algodon.jpg",
+    "idCategoria": 2
+}
+
+
+PUT {{baseUrl}}/productos
+Content-Type: application/json
+
+{
+    "idProducto": 1,
+    "cantidad": 8,
+    "descripcion": "Smartphone Samsung Galaxy A54 5G",
+    "precio": 649.99,
+    "unidad": "unidad",
+    "urlImagen": "https://example.com/images/samsung-a54-5g.jpg",
+    "idCategoria": 1
+}
+
+
+DELETE {{baseUrl}}/productos
+Content-Type: application/json
+
+{
+    "idProducto": 4
+}
+
+### ===========================
+### CARRITO DE COMPRAS - CRUD
+### ===========================
+
+
+GET {{baseUrl}}/carrito
+
+
+POST {{baseUrl}}/carrito
+Content-Type: application/json
+
+{
+    "idUsuario": 1,
+    "idProducto": 1
+}
+
+POST {{baseUrl}}/carrito
+Content-Type: application/json
+
+{
+    "idUsuario": 2,
+    "idProducto": 2
+}
+
+
+POST {{baseUrl}}/carrito
+Content-Type: application/json
+
+{
+    "idUsuario": 1,
+    "idProducto": 3
+}
+
+
+POST {{baseUrl}}/carrito
+Content-Type: application/json
+
+{
+    "idUsuario": 2,
+    "idProducto": 1
+}
+
+
+PUT {{baseUrl}}/carrito
+Content-Type: application/json
+
+{
+    "idCompra": 1,
+    "idUsuario": 2,
+    "idProducto": 3
+}
+
+
+DELETE {{baseUrl}}/carrito
+Content-Type: application/json
+
+{
+    "idCompra": 4
+}
+
